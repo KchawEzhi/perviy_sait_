@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700|Old+Standard+TT&display=swap&subset=cyrillic" rel="stylesheet">
+    <title>Визитка Грустного Лягушонка</title>
+  </head>
+
+  <body  class="page">
+    <header class="page-header">
+      <div class="container">
+        <button class="theme-button" type="button">Изменить тему</button>
+        <form class="login-form" action="index.html" method="post">
+          <input class="login-field" type="text" required placeholder="login"><br>
+          <input class="password-field" type="password" required placeholder="*****"><br>
+          <labe><input class="show-password" type="checkbox"> show password</labe><br>
+          <div class="security">
+            <div class="security-bad"></div>
+          </div>
+          <button class="login-submit" type="submit">log-in</button>
+        </form>
+      </div>
+    </header>
+  
+    <section class="hero-image">
+      <div class="container">
+        <h1 class="heading">Грустный Лягушонок</h1>
+        <p>Ну очень начинающий javascripter и htmler</p>
+        <img class="about-image" src="img/pepeavatar.png" width="147" height="147" alt="лягуха пепе">
+      </div>
+    </section>
+
+    <section class="intro">
+      <div class="container">
+        <h2 class="subheading">Давайте познакомимся</h2>
+        <h3>Пара слов о себе</h3>
+        <p>Я хочу работать в ойцi за за 300k/nanosek</p>
+        <h3>Чем могу быть полезен</h3>
+      <p>Например, я сделал страничку из начального задания интерактивной</p>
+    </div>
+    </section>
+
+    <section class="portfolio">
+      <div class="container">
+        <h2 class="subheading">Мои работы</h2>
+
+        <h3>Базовый JS</h3>
+        <p>Это база, nodiscuss</p>
+
+        <h3>Начальныйе навыки использования Git</h3>
+        <p>Именно поэтому вы видите этот <em>сайт</em></p>
+
+        <h3>Перекроить шаблон и добавить в него кучу <em>полезных вещей</em></h3>
+        <p>Таких как 
+          <button class="tooltip-button" type="button" data-tooltip-text="сделать интерактивные кнопочки и списки, и пр">js dom</button>,
+          <button class="tooltip-button" type="button" data-tooltip-text="добавить новых тегов. семантика еее">html tags</button>,
+          <button class="tooltip-button" type="button" data-tooltip-text="понятия не имею как это работает, но тут можно юзать flexхх">css rules</button>
+        </p>
+      </div>
+      <div class="container">
+        <div class="tooltip">
+          <span class="toolti-text">tooltip-text-displayed-here</span>
+          <button class="tooltip-close" type="button">Close</button>
+        </div>
+      </div> 
+    </section>
+
+    <section>
+      <div class="container">
+        <p>Оставьте ваше предложение здесь</p>
+        <ul class="comment-list">
+        </ul>
+        <label>Понравилось: <count class=like-number>12</count></label>
+        <button class="like-button" type="button"><img src="img/like.svg" alt="like" height="10" width="10" ></button>
+      </div>
+    </section>
+    <section>
+      <div class="container">
+        <form class="comment-form" action="index.html" method="post">
+          <textarea class="comment-input" row="4" placeholder="comment here"></textarea><br>
+          <label>Использовано <output class="comment-counter">0</output> символов из 200</label><br>
+          <button class="priority-button" type="button">Low priority issue</button>
+          <button class="submit-button" type="submit">Submit</button>
+        </form>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <select class="filter">
+          <option value="front">фронт-энд</option>
+          <option value="back">бэк-энд</option>
+          <option value="hr">хр</option>
+          <option value="qa">тестирование</option>
+          <option value="other">другое</option>
+          <option value="all" selected>всё</option>
+        </select>
+        <div>
+          <div class="news-block" data-category="qa">
+            <span>тестирование</span>
+          </div>
+          <div class="news-block" data-category="back">
+            <span>python</span>
+          </div>
+          <div class="news-block" data-category="front">
+            <span>жаваскрипт не жава?</span>
+          </div>
+          <div class="news-block" data-category="hr">
+            <span>чем вообще занимаются хр?</span>
+          </div>
+          <div class="news-block" data-category="other">
+            <span>а дизайнер - это программист?)</span>
+          </div>
+          <div class="news-block" data-category="qa">
+            <span>в тестирование проще всего попасть</span>
+          </div>
+          <div class="news-block" data-category="front">
+            <span>html сложнее чем я думал</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h3>А что по-вашему круче?</h3>
+        <p class="poll-result"></p>
+        <div>
+          <form class="poll-form">
+            <label><input class="poll-option" type="radio" name="poll" data-poll="hr">Хр</label>
+            <label><input class="poll-option" type="radio" name ="poll" data-poll="qa">куа</label>
+            <label><input class="poll-option" type="radio" name ="poll" data-poll="front">фронт</label>
+            <label><input class="poll-option" type="radio" name ="poll" data-poll="back">бэк</label>
+            <label><input class="poll-option" type="radio" name ="poll" data-poll="ui">дезигн</label>
+            <button class="poll-submit" type="submit">submit poll</button>
+          </form>
+        </div>
+      </div>
+    </section>  
+
+    <section>
+      <div class="container">
+        <h2>Здесь даже есть читалка</h2>
+        <div class="instruments">
+          <select class="reader-color">
+            <option value="blue">голубой</option>
+            <option value="pink">розовый</option>
+            <option value="white">белый</option>
+            <option value="grey">серый</option>
+            <option value="black" selected>чёрный</option>
+          </select>
+          <input class="reader-backcolor" type="text" placeholder="background color">
+          <br>
+          <input class="reader-font" type="range" min="10" max="30" step="2" value="15"
+        </div>
+        <article class="reader">
+          <p>представим, что здесь очень длинный текст</p>
+        </article>
+      </div>
+    </section>
+
+    <footer class="page-footer">
+      <div class="container">
+        <p>По всем вопросам лучше не пишите:</p>
+        <a href="mailto:lyaguxa_pepe@mailforspam.com">lyaguxa_pepe@mailforspam.com</a>
+        <br>
+        <a href="tel:+79876543210">+7(123)-45-86</a>
+      </div>
+    </footer>
+    <button class="up-button" type="button">К началу</button>
+    <script src="script.js"></script>
+  </body>
+</html>
