@@ -270,3 +270,20 @@ html {
   width: 0;
   background-color: #f2f4f6;
 }
+
+.important {
+  background-color: red;
+}
+
+.warning {
+  color: red;
+}
+
+.poll-result {
+  background-color: crimson;
+  display: none;
+}
+
+.shown {
+  display: block;
+}

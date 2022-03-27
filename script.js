@@ -17,16 +17,10 @@ commentForm.onsubmit = function (evt) {
     let newComment = document.createElement('li');
     newComment.textContent = commentInput.value;
     if (priorityButton.classList.contains('important')) {
-        newComment.style.backgroundColor = 'red'
-    }   else { 
-        if (page.classList.contains('dark-theme')) {
-            newComment.style.backgroundColor = 'black'
-        }   else {
-            newComment.style.backgroundColor = 'white'
-        }
-    }
+        newComment.classList.add('important')
+    }   else; 
     commentList.append(newComment);
-    commentInput.value = ""; // проблема с виртуалкой в этой строке
+    commentInput.value = ""; 
     commentCounter.textContent = 0;
 }
 
@@ -40,14 +34,10 @@ commentInput.oninput = function () {
     commentCounter.textContent = commentLength;
     if (commentLength > 200) {
         submitButton.disabled = true;
-        commentForm.style.backgroundColor = 'red';
+        commentForm.classList.add('warning');
     }   else {
+        commentForm.classList.remove('warning');
         submitButton.disabled = false;
-        if (page.classList.contains('dark-theme')) {
-            commentForm.style.backgroundColor = 'black';
-        }   else {
-            commentForm.style.backgroundColor = 'white';
-        }
     }
 }
 
@@ -59,10 +49,8 @@ priorityButton.onclick = function () {
     priorityButton.classList.toggle('important');
     if (priorityButton.classList.contains('important')) {
         priorityButton.textContent = 'Important issue';
-        priorityButton.style.backgroundColor = 'red';
     } else {
         priorityButton.textContent = 'Low priority issue';
-        priorityButton.style.backgroundColor = 'white';
     }
 }
 
@@ -140,17 +128,15 @@ for (let pollOption of pollOptions) {
     pollOption.onchange = function () {
         if (pollOption.dataset.poll === 'back' || pollOption.dataset.poll === 'ui') {
                 pollSubmit.disabled = true; 
-                pollResult.style.display = 'block';
-                pollResult.textContent = 'мб выберешь другой вариант?';
-                pollResult.style.color = 'red'; 
+                pollResult.classList.add('shown');
+                pollResult.textContent = 'мб выберешь другой вариант?'; 
         }  else if (pollOption.dataset.poll === 'hr') { 
                 pollSubmit.disabled = false;
-                pollResult.style.display = 'block';
-                pollResult.textContent = 'рили?';
-                pollResult.style.color = 'red';
+                pollResult.classList.add('shown');
+                pollResult.textContent = 'рили?'; 
         }  else {
                 pollSubmit.disabled = false;
-                pollResult.style.display = 'none';
+                pollResult.classList.remove('shown');
         }
     }
 }
